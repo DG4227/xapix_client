@@ -35,7 +35,7 @@ XapixClient.configure do |config|
 end
 ```
 
-Name your Models according to the Endpoints you defined on xapix.io and subclass XapixClient::Resource. You are expected to name your xapix.io Endpoints pluralized while the Model class needs to singularized. This allows compliance with the ActiveResource pattern.
+Name your Models according to the Endpoints you defined on xapix.io and subclass `XapixClient::Resource`. You are expected to name your xapix.io Endpoints pluralized while the Model class needs to singularized. This allows compliance with the ActiveResource pattern.
 
 ## Example
 
@@ -59,7 +59,7 @@ For further usage follow the documentation on [json_api_client](https://github.c
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/xapix_client/fork )
+1. Fork it ( https://github.com/pickledolives/xapix_client/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
