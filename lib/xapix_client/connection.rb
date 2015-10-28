@@ -2,6 +2,8 @@ require 'json_api_client'
 
 module XapixClient
   class Connection < JsonApiClient::Connection
+    TOKEN = 'Authorization-Token'
+
     def initialize(options = {})
       fail(XapixClient::NoConfigurationError) if XapixClient.configuration.nil?
       fail(XapixClient::BadConfigurationError) if XapixClient.configuration.project_name.nil?
@@ -10,7 +12,7 @@ module XapixClient
 
     def run(request_method, path, params = {}, headers = {})
       fail(XapixClient::BadConfigurationError) if XapixClient.configuration.auth_token.nil?
-      super(request_method, path, params, headers.merge(auth_token: XapixClient.configuration.auth_token))
+      super(request_method, path, params, headers.merge(TOKEN => XapixClient.configuration.auth_token))
     end
   end
 end

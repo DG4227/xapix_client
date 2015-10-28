@@ -4,6 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'xapix_client/version'
 require "xapix_client/config"
 require 'xapix_client/connection'
+require "xapix_client/requestor"
 require 'xapix_client/resource'
 
 Gem::Specification.new do |spec|
@@ -24,5 +25,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "rake", "~> 10.0"
 
-  spec.add_runtime_dependency 'json_api_client', '>= 1.0.0.beta6'
+  spec.add_runtime_dependency 'json_api_client', '>= 1.0.1'
 end
